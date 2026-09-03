@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+build/
+dist/
+reader_config.json
+*.spec.bak
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
