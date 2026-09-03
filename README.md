@@ -8,11 +8,24 @@
 
 [下载最新版 Reader（Windows x64）](https://github.com/Qiuyue0125/Reader/releases/latest/download/reader.exe)
 
-下载 `reader.exe` 后可直接运行，本程序不会污染系统目录，仅在同名目录下会创建一个配置文件。
+下载 `reader.exe` 后可直接运行，无需安装 Python。首次运行若被 Windows SmartScreen 提示，请核对下载来源及 Release 页面提供的 SHA-256 后再决定是否继续。
 
-## 演示
+## 效果预览
 
-[查看演示视频](./演示.mp4)
+![Reader 动态演示](./assets/demo.gif)
+
+### 阅读浮窗
+
+![透明阅读浮窗](./assets/reading.png)
+
+### 书库与个性化设置
+
+<p align="center">
+  <img src="./assets/library.png" alt="我的书库" width="49%">
+  <img src="./assets/settings.png" alt="偏好设置" width="49%">
+</p>
+
+[查看或下载高清演示视频（MP4）](https://github.com/Qiuyue0125/Reader/releases/download/v1.0.0/demo.mp4)
 
 ## 主要功能
 
