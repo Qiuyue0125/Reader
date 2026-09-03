@@ -8,7 +8,7 @@
 
 [下载最新版 Reader（Windows x64）](https://github.com/Qiuyue0125/Reader/releases/latest/download/reader.exe)
 
-下载 `reader.exe` 后可直接运行，无需安装 Python。首次运行若被 Windows SmartScreen 提示，请核对下载来源及 Release 页面提供的 SHA-256 后再决定是否继续。
+下载 `reader.exe` 后可直接运行，本程序不会污染系统目录，仅在同名目录下会创建一个配置文件。
 
 ## 演示
 
