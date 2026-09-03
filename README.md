@@ -8,7 +8,7 @@
 
 [下载最新版 Reader（Windows x64）](https://github.com/Qiuyue0125/Reader/releases/latest/download/reader.exe)
 
-下载 `reader.exe` 后可直接运行，并且本程序不会
+下载 `reader.exe` 后可直接运行，并且本程序不会污染系统目录，只会在exe同目录下生成一个配置文件。
 
 ## 效果预览
 
