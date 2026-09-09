@@ -5,9 +5,10 @@ __pycache__/
 venv/
 build/
 dist/
-reader_config.json
+reader_config.json*
 *.spec.bak
 .idea/
 .vscode/
 Thumbs.db
 Desktop.ini
+*.exe

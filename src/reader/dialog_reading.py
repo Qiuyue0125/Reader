@@ -13,8 +13,8 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QFileDialog,
                                QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
                                QMessageBox, QPushButton, QVBoxLayout)
 
-from utils import local_path_from_url, RoundedDialog
-from styles import toc_list_style_css, file_dialog_style_css
+from .utils import local_path_from_url, RoundedDialog
+from .styles import toc_list_style_css, file_dialog_style_css
 
 
 class TocDialog(QDialog):

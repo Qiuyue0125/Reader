@@ -12,10 +12,10 @@ from PySide6.QtWidgets import (QVBoxLayout, QFormLayout, QCheckBox, QHBoxLayout,
 from PySide6.QtGui import QColor, QFont, QKeySequence
 from PySide6.QtCore import Qt
 
-from utils import (WEIGHT_MAP, RoundedDialog,
+from .utils import (WEIGHT_MAP, RoundedDialog,
                    WheelGuardSpinBox, WheelGuardDoubleSpinBox,
                    WheelGuardComboBox, WheelGuardFontComboBox)
-from styles import apply_dialog_style
+from .styles import apply_dialog_style
 
 
 # 普通设置项到控件与读取方法的映射

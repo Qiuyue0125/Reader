@@ -1,3 +1,13 @@
+# Reader v1.0.1
+
+统一 src、assets、dist 目录，调整源码入口和打包路径。源码与打包版共用便携配置。
+
+在本 Release 的 Assets 中下载 `reader.exe`，无需安装 Python。
+
+SHA-256：`1dc919b62ed5b9a23687f45147c72fd2c8680e72ee01ad4afc41c3230ca4e5ac`
+
+---
+
 # Reader v1.0.0
 
 Reader 是一个面向 Windows 的轻量、无边框离线小说阅读器。

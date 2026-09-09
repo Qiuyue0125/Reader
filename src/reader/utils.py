@@ -8,6 +8,7 @@ utils 模块
 import sys
 import os
 import json
+from pathlib import Path
 import re
 import zipfile
 import xml.etree.ElementTree as ET
@@ -41,12 +42,20 @@ CONFIG_DEFAULTS = {
 
 
 def get_data_dir():
-    """返回配置数据目录 打包后取可执行文件目录 源码运行时取脚本目录"""
+    """配置随 EXE 保存，源码运行时使用项目 dist 目录。"""
+    override = os.environ.get('READER_DATA_DIR')
+    if override:
+        return os.path.abspath(override)
     if getattr(sys, 'frozen', False):
         data_dir = os.path.dirname(os.path.abspath(sys.executable))
     else:
-        data_dir = os.path.dirname(os.path.abspath(__file__))
+        data_dir = str(Path(__file__).resolve().parents[2] / 'dist')
     return data_dir
+
+
+def asset_path(name):
+    root = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[2]))
+    return str(root / 'assets' / name)
 
 
 # 配置数据目录与配置文件路径
@@ -377,6 +386,7 @@ def save_config(config):
     """原子方式保存配置 先写临时文件再替换 避免写入中断损坏配置"""
     temp_file = CONFIG_FILE + ".tmp"
     try:
+        os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
         with open(temp_file, 'w', encoding='utf-8') as f:
             json.dump(config, f, ensure_ascii=False, indent=2)
             f.write('\n')

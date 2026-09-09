@@ -83,21 +83,38 @@ These shortcuts can be changed in the **Shortcuts** section of Application Setti
 
 When the window is focused, the fixed arrow-key controls are also available: `←` previous page, `→` next page, `↓` hide/show, and `↑` exit completely. While the chapter directory is open, the up and down keys are used to select chapters instead.
 
+## Project layout
+
+Run the commands below from the repository root. Source runs and packaged runs share the configuration in `dist`. Only source, assets and documentation are committed; executables are distributed through Releases.
+
+```text
+Reader/
+├─ src/
+│  ├─ main.py
+│  └─ reader/
+├─ assets/
+├─ .venv/
+├─ Reader.spec
+├─ requirements.txt
+└─ dist/
+   ├─ reader.exe
+   └─ reader_config.json
+```
+
 ## Run from source
 
 Windows and Python 3.10 or later are required:
 
 ```powershell
-cd reader
-python -m pip install -r requirements.txt
-python main.py
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe src\main.py
 ```
 
 ## Build
 
 ```powershell
-cd reader
-pyinstaller reader_win.spec --clean --noconfirm
+.venv\Scripts\python.exe -m PyInstaller Reader.spec --noconfirm
 ```
 
 The packaged application is written to the project's `dist` directory.

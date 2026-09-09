@@ -81,21 +81,38 @@
 
 窗口处于前台时还可以使用固定方向键：`←` 上一页、`→` 下一页、`↓` 隐藏/显示、`↑` 彻底关闭。打开目录后，上下键会优先用于选择目录项。
 
+## 目录结构
+
+以下命令均在仓库根目录执行。源码与打包版共用 `dist` 内的配置。仓库只保存源码、资源和文档，可执行文件通过 Releases 分发。
+
+```text
+Reader/
+├─ src/
+│  ├─ main.py
+│  └─ reader/
+├─ assets/
+├─ .venv/
+├─ Reader.spec
+├─ requirements.txt
+└─ dist/
+   ├─ reader.exe
+   └─ reader_config.json
+```
+
 ## 从源码运行
 
 需要 Windows 和 Python 3.10 或更高版本：
 
 ```powershell
-cd reader
-python -m pip install -r requirements.txt
-python main.py
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe src\main.py
 ```
 
 ## 打包
 
 ```powershell
-cd reader
-pyinstaller reader_win.spec --clean --noconfirm
+.venv\Scripts\python.exe -m PyInstaller Reader.spec --noconfirm
 ```
 
 打包结果位于项目根目录的 `dist` 文件夹。
